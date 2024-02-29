@@ -1,0 +1,7 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="CompoundRunConfigurationType">
+    <toRun name="EmailNotificationFunction" type="LaunchSettings" />
+    <toRun name="Test Task .Net Reenbit Masksym Sheremeta: http" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>

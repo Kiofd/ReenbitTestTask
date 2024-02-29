@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Test_Task_.Net_Reenbit_Masksym_Sheremeta</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Storage.Blobs" Version="12.20.0-beta.1" />
+      <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
+    </ItemGroup>
+
+</Project>

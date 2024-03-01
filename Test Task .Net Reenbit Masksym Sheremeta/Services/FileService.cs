@@ -1,8 +1,4 @@
-﻿using Azure.Storage;
-using Azure.Storage.Blobs;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.Storage;
-using Microsoft.Azure.Storage.Blob;
+﻿using Azure.Storage.Blobs;
 using Test_Task_.Net_Reenbit_Masksym_Sheremeta.Models;
 
 namespace Test_Task_.Net_Reenbit_Masksym_Sheremeta.Services;
@@ -10,7 +6,7 @@ namespace Test_Task_.Net_Reenbit_Masksym_Sheremeta.Services;
 public class FileService : IFileService
 {   
     private readonly string _connectionString;
-    public readonly string _conteiner;
+    private readonly string _conteiner;
     public FileService(IConfiguration configuration)
     {
         _connectionString = configuration.GetValue<string>("AzureBlobStorage:ConnectionString");
@@ -35,7 +31,7 @@ public class FileService : IFileService
 
         await blobClient.UploadAsync(memoryStream);
 
-        blobClient.SetMetadata(new Dictionary<string, string>
+        await blobClient.SetMetadataAsync(new Dictionary<string, string>
         {
             { "Email", data.Email }
         });

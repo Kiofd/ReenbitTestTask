@@ -29,7 +29,7 @@ public class HomeController : Controller
         
         if (ModelState.IsValid)
         {
-            var url =  fileService.UploadFileAsync(blob);
+            await fileService.UploadFileAsync(blob);
         }
         
         return View();

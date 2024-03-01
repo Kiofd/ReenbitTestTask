@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test Task .Net Reenbit Masksym Sheremeta", "Test Task .Net Reenbit Masksym Sheremeta\Test Task .Net Reenbit Masksym Sheremeta.csproj", "{EF607317-7014-4A31-8CEB-BEF54F703DAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailNotificationFunction", "EmailNotificationFunction\EmailNotificationFunction.csproj", "{41EAC1F5-144D-44E7-92E7-ADD06355B8E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF607317-7014-4A31-8CEB-BEF54F703DAA} = {EF607317-7014-4A31-8CEB-BEF54F703DAA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

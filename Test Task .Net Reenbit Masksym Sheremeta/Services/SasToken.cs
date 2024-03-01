@@ -6,7 +6,7 @@ namespace Test_Task_.Net_Reenbit_Masksym_Sheremeta.Services;
 public class SasToken
 {
     private readonly string _connectionString;
-    public readonly string _conteiner;
+    private readonly string _conteiner;
 
     public SasToken( string connectionString, string conteiner)
     {

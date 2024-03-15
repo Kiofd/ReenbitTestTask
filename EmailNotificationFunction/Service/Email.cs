@@ -6,7 +6,7 @@ namespace EmailNotificationFunction.Service
     class Email
     {
         private readonly int _port = 587;
-        private readonly string _smtpPassword = "bgfstzlzqjetcmbc";
+        private readonly string _smtpPassword = "stmpPassword";
         private readonly string _smtpEmail = "noreply.maksym.sheremeta@gmail.com";
 
         public async Task SendEmail(string email, string fileName)

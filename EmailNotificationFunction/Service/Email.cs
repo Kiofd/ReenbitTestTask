@@ -29,7 +29,7 @@ namespace EmailNotificationFunction.Service
             SmtpClient smtpServer = new SmtpClient
             {
                 Host = "smtp.gmail.com",
-                Port = _smtpPort,
+                Port = _port,
                 EnableSsl = true,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
@@ -44,8 +44,6 @@ namespace EmailNotificationFunction.Service
             {
                 throw new Exception(ex.Message);
             }
-
-            return Task.CompletedTask;
         }
     }
 }

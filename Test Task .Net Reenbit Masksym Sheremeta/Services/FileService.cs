@@ -7,10 +7,10 @@ public class FileService : IFileService
 {   
     private readonly string _connectionString;
     private readonly string _conteiner;
-    public FileService(IConfiguration configuration)
+    public FileService(string connectionString, string conteiner)
     {
-        _connectionString = configuration.GetValue<string>("AzureBlobStorage:ConnectionString");
-        _conteiner = configuration.GetValue<string>("AzureBlobStorage:ContainerName");
+        _connectionString = connectionString;
+        _conteiner = conteiner;
     }
     public async Task<string> UploadFileAsync(Blob data)
     {

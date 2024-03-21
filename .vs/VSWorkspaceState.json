@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.run"
+    "\\.run",
+    "\\EmailNotificationFunction",
+    "\\Test Task .Net Reenbit Masksym Sheremeta",
+    "\\Test Task .Net Reenbit Masksym Sheremeta\\Controllers"
   ],
-  "SelectedNode": "\\Test Task .Net Reenbit Masksym Sheremeta.sln",
+  "SelectedNode": "\\Test Task .Net Reenbit Masksym Sheremeta\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }

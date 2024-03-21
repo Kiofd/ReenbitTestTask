@@ -3,13 +3,19 @@ using System.Net.Mail;
 
 namespace EmailNotificationFunction.Service
 {
-    class Email
+    class Email : IEmail
     {
-        private readonly int _port = 587;
-        private readonly string _smtpPassword = "bgfstzlzqjetcmbc";
-        private readonly string _smtpEmail = "noreply.maksym.sheremeta@gmail.com";
+        private readonly int _smtpPort;
+        private readonly string? _smtpPassword;
+        private readonly string _smtpEmail;
 
-        public async Task SendEmail(string email, string fileName)
+        public Email(string smtpEmail, string smtpPassword, int smtpPort)
+        {
+            _smtpEmail = smtpEmail;
+            _smtpPassword = smtpPassword;
+            _smtpPort = smtpPort;
+        }
+        public Task SendEmail(string email, string fileName)
         {
             MailMessage message = new MailMessage();
 
@@ -23,7 +29,7 @@ namespace EmailNotificationFunction.Service
             SmtpClient smtpServer = new SmtpClient
             {
                 Host = "smtp.gmail.com",
-                Port = _port,
+                Port = _smtpPort,
                 EnableSsl = true,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
@@ -38,6 +44,8 @@ namespace EmailNotificationFunction.Service
             {
                 throw new Exception(ex.Message);
             }
+
+            return Task.CompletedTask;
         }
     }
 }

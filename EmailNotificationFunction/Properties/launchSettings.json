@@ -2,7 +2,7 @@
   "profiles": {
     "EmailNotificationFunction": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7112",
+      "commandLineArgs": "--port 7112", 
       "launchBrowser": false
     }
   }

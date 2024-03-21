@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../DeploymentTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ReStore" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../URL shortener" vcs="Git" />
   </component>

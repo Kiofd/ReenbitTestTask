@@ -8,12 +8,12 @@ namespace Test_Task_.Net_Reenbit_Masksym_Sheremeta.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private static IConfiguration? _configuration;
+    private readonly IFileService _service;
 
-    public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+    public HomeController(ILogger<HomeController> logger, IFileService service)
     {
         _logger = logger;
-        _configuration = configuration;
+        _service = service;
     }
 
     [HttpGet]
@@ -25,11 +25,9 @@ public class HomeController : Controller
     [HttpPost]
     public async Task<IActionResult> Index(Blob blob)
     {
-        FileService fileService = new(_configuration);
-        
         if (ModelState.IsValid)
         {
-            await fileService.UploadFileAsync(blob);
+            await _service.UploadFileAsync(blob);
         }
         
         return View();

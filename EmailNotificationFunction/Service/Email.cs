@@ -15,7 +15,7 @@ namespace EmailNotificationFunction.Service
             _smtpPassword = smtpPassword;
             _smtpPort = smtpPort;
         }
-        public Task SendEmail(string email, string fileName)
+        public async Task SendEmail(string email, string fileName)
         {
             MailMessage message = new MailMessage();
 
@@ -29,7 +29,7 @@ namespace EmailNotificationFunction.Service
             SmtpClient smtpServer = new SmtpClient
             {
                 Host = "smtp.gmail.com",
-                Port = _port,
+                Port = _smtpPort,
                 EnableSsl = true,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
